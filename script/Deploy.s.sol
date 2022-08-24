@@ -3,14 +3,8 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
 
-// import "solmate/test/utils/mocks/MockERC721.sol";
-
-// import "/Contract.sol";
-
 /* 
-forge script Deploy --rpc-url $RINKEBY_RPC_URL  --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_KEY -vvvv
-forge script Deploy --rpc-url $PROVIDER_MUMBAI  --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $POLYGONSCAN_KEY -vvvv
-forge script Deploy --rpc-url https://rpc.ankr.com/polygon  --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $POLYGONSCAN_KEY --with-gas-price 30gwei -vvvv
+forge script Deploy --rpc-url https://rpc.ankr.com/polygon_mumbai --private-key !!PRIVATE_KEY --with-gas-price 38gwei -vvvv --broadcast 
 */
 
 function deployCode(bytes memory code) returns (address addr) {
@@ -22,8 +16,6 @@ function deployCode(bytes memory code) returns (address addr) {
 }
 
 contract Deploy is Script {
-    // Contract test;
-
     function run() external {
         vm.startBroadcast();
 
